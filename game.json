@@ -1,0 +1,169 @@
+{    
+    "COORIDOR": {
+        "name": "COORIDOR",
+        "desc": "This is the Cooridor in the Nerd's Work Space. This is the place where you normally work.",
+        "exits": [{
+            "exit": "NORTH",
+            "target": "ART GALLERY"
+        }, {
+            "exit": "EAST",
+            "target": "MUSIC ROOM"
+        }, {
+            "exit": "WEST",
+            "target": "ART ROOM"
+        }],
+        "items": [
+            {
+                "item": "CELL PHONE",
+                "desc": "A cell phone is lying on a table. It is your phone.",
+                "take": "You pick the cell phone off of the table. When you put the cell phone in your pocket it gets a notification."
+            }
+        ]
+    },
+    "MUSIC ROOM": {
+        "name": "MUSIC ROOM",
+        "desc": "This is the magic happens to make the music for the videogames.",
+        "exits": [{
+            "exit": "WEST",
+            "target": "COORIDOR"
+        }],
+        "items": [
+            {
+                "item": "SHEET MUSIC",
+                "desc": "It is sheet music for one of your first games.",
+                "take": "You put the sheet music in your backpack for inspiration for when you get to your Study."
+            }
+        ]
+    },
+    "ART ROOM": {
+        "name": "ART ROOM",
+        "desc": "It is a room that has all kinds of arts materials. This room is where the graphic for game come to life.",
+        "exits": [{
+            "exit": "EAST",
+            "target": "COORIDOR"
+        }],
+        "items": [
+            {
+                "item": "PAINT BRUSH",
+                "desc": "A normal brush that looks to have been used",
+                "take": "You put the brush in your backpack."
+            }
+        ]
+    },
+    "ART GALLERY": {
+        "name": "ART GALLERY",
+        "desc": "This room shows off the best projects that your work has made.",
+        "exits": [{
+            "exit": "NORTH",
+            "target": "MAIN HALL"
+        }]
+    },
+    "MAIN HALL": {
+        "name": "MAIN HALL",
+        "desc": "This room connects to several hangout rooms.",
+        "exits": [{
+            "exit": "NORTH",
+            "target": "LOUNGE"
+        }, {
+            "exit": "EAST",
+            "target": "GAME ROOM"
+        }, {
+            "exit": "WEST",
+            "target": "NERD'S CORNER"
+        }]
+    },
+    "NERD'S CORNER": {
+        "name": "NERD'S CORNER",
+        "desc": "This is a very nerdy space. Several anime posters hang on the wall. You even notice the Harry Potter poster. On the table there is a paper wait that looks like the Starship Enterprise.",
+        "exits": [{
+            "exit": "EAST",
+            "target": "MAIN HALL"
+        }],
+        "items": [
+            {
+                "item": "D&D DICE",
+                "desc": "There are so many dice in a varity of colors.",
+                "take": "You put the D&D dice in your bag nobody will miss them and this is what everybody does."
+            }
+        ]
+    },
+    "GAME ROOM": {
+        "name": "GAME ROOM",
+        "desc": "There are so many systems and games that have been collected over the years. There is also a gaming PC.",
+        "exits": [{
+            "exit": "WEST",
+            "target": "ART ROOM"
+        }],
+        "items": [
+            {
+                "item": "VIDEOGAME SYSTEM",
+                "desc": "On of your favorite systems to play.",
+                "take": "You put the system in you backpack."
+            },
+            {
+                "item": "VIDEOGAMES",
+                "desc": "A stack of your favorite games.",
+                "take": "You put the games in your bag."
+            }
+        ]
+    },
+     "LOUNGE": {
+        "name": "LOUNGE",
+        "desc": "A nice place to code.",
+        "exits": [{
+            "exit": "NORTH",
+            "target": "KITCHEN"
+        }, {
+            "exit": "SOUTH",
+            "target": "MAIN HAll"
+        }],
+        "items": [
+            {
+                "item": "PHONE CHARGER",
+                "desc": "Again something your left yesterday.",
+                "take": "You put your charger in you backpack."
+            },
+            {
+                "item": "LAPTOP",
+                "desc": "Your laptop.",
+                "take": "You put your laptop in your bag."
+            },
+            {
+                "item": "LAPTOP CHARGER",
+                "desc": "The thing you use to charge your laptop.",
+                "take": "You put the charger in your bag."
+            }
+        ]
+    },
+    "KITCHEN": {
+        "name": "KITCHEN",
+        "desc": "This is where you get the gaming food.",
+        "exits": [{
+            "exit": "NORTH",
+            "target": "STUDY"
+        }, {
+            "exit": "SOUTH",
+            "target": "LOUNGE"
+        }],
+        "items": [
+            {
+                "item": "RAMEN",
+                "desc": "The food of the gaming Gods.",
+                "take": "You grab a bowl of Ramen."
+            },
+            {
+                "item": "SODA",
+                "desc": "The nector of the gaming Gods.",
+                "take": "You grab the Soda."
+            }
+        ]
+    },
+    "STUDY": {
+        "name": "STUDY",
+        "desc": "This is where you get the coding done.",
+        "exits": [{
+            "exit": "SOUTH",
+            "target": "LOUNGE"
+        }]
+        }
+}

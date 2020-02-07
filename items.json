@@ -1,0 +1,69 @@
+{
+    "CELL PHONE": {
+      "exits": {
+          "KITCHEN": "You get a text that says, Hope you have a great day at work!"
+      },
+      "actions": {
+         "read": "The text says, don't forget to collect all you stuff before you go to your Study!"
+      },
+      "points": 5
+    },
+    "SHEET MUSIC": {
+      "exits": {},
+      "actions": {
+         "read": "The music reminds you of your first game design project."
+      },
+      "points": 1
+    },
+    "PAINT BRUSH": {
+      "exits": {},
+      "actions": {},
+      "points": 1
+    },
+    "PHONE CHARGER": {
+      "exits": {},
+      "actions": {},
+      "points": 3
+    },
+    "GAME SYSTEM": {
+      "exits": {},
+      "actions": {
+      "touch": "You play the game that you left in the game system."
+    },
+      "points": 5
+    },
+    "VIDEOGAMES": {
+       "exits": {},
+       "actions": {},
+       "points": 1
+    },
+    "LAPTOP": {
+      "exits": {},
+      "actions": {},
+      "points": 1
+    },
+    "LAPTOB CHARGER": {
+      "exits": {},
+      "actions": {},
+      "points": 1
+    },
+    "D&D DICE": {
+      "exits": {},
+      "actions": {},
+      "points": 5
+    },
+    "RAMEN": {
+      "exits": {},
+      "actions": {
+         "eat": "You eat the Ramen it fulfills your hunger."
+      },
+      "points": 3
+    },
+    "SODA": {
+      "exits": {},
+      "actions": {
+         "drink": "You drink the soda."
+      },
+   "points": 3     
+   }
+}
