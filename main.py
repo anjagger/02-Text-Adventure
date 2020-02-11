@@ -4,7 +4,7 @@ import sys, os, json
 assert sys.version_info >= (3,7), "This script requires at least Python 3.7"
 
 # The game and item description files (in the same folder as this script)
-game_file = 'zork.json'
+game_file = 'game.json'
 item_file = 'items.json'
 inventory = []
 points = 0
@@ -32,28 +32,29 @@ def calculate_points(items):
     points = 0
     for i in inventory:
         if i in items:
-            point += items[i]["points"]
+            points += items[i]["points"]
     return points
 
 def render(game,items,current,moves,points):
     c = game[current]
-    print("\n\n{} Moves\t\t\t\t{} Points".format(moves, points)
+    print("\n\n{} Moves\t\t\t\t{} Points".format(moves, points))
     print("\nYou are at the " + c["name"])
     print(c["desc"])
 
-    for i in c["items"]:
-        if not check_inventory(i["item"]):
-            print(i["desc"])
+    if "items" in c:
+        for i in c["items"]:
+            if not check_inventory(i["item"]):
+                print(i["desc"])
 
     for i in inventory:
-        of i in items:
-            if current in item[i]["exits"]:
+        for i in items:
+            if current in items[i]["exits"]:
                 print(items[i]["exits"][current])
 
 def get_input():
     reponse = input("\nWhat would you like to do? ")
-    reponse = response.upper().strip()
-    return current
+    reponse = reponse.upper().strip()
+    return reponse
 
 def update(game,items,current,response):
     if response == "INVENTORY":
@@ -67,11 +68,11 @@ def update(game,items,current,response):
 
     c = game[current]
     for e in c["exits"]:
-        if reponse == e["exit"]:
+        if response == e["exit"]:
             return e["target"]
 
-    for i in c["item"]:
-        if response == "GET" + i["item"] and not check_inventory(i["item"]):
+    for i in c["items"]:
+        if response == "GET " + i["item"] and not check_inventory(i["item"]):
             print(i["take"])
             inventory.append(i["item"])
             return current 
@@ -79,11 +80,11 @@ def update(game,items,current,response):
     for i in inventory:
         if i in items:
             for action in items[i]["action"]:
-                if response == action + = = + i:
+                if response == action + " " + i:
                     print(items[i]["actions"][action])
                     return current
 
-    if response[0,3] == "GET":
+    if response[0:3] == "GET":
         print("You can't take that!")
     elif response in ["NORTH","SOUTH","EAST","WEST","NW","NE","SW","SE","UP","DOWN"]:
         print("You can't go that way!")
@@ -95,7 +96,7 @@ def update(game,items,current,response):
 
 # The main function for the game
 def main():
-    current = 'CORRIDOR'  # The starting location
+    current = 'COORIDOR'  # The starting location
     end_game = ['STUDY']  # Any of the end-game locations
     moves = 0
     points = 0
@@ -105,15 +106,15 @@ def main():
     # Add your code here
 
     while True:
-        render(game,imtems,current)
-        response = get_imput()
+        render(game,items,current,moves,points)
+        response = get_input()
 
         if response == "Quit":
             break
         
         current = update(game,items,current,response)
         moves += 1
-        points = calulate_points{items}
+        points = calculate_points(items)
 
     print("Thanks for playing!")
     print("You scored {} points in {} moves.".format(points,moves))
